@@ -28,6 +28,16 @@ This script is provided "as-is" without any warranties or guarantees of any kind
   - Cleans up unnecessary files, including `lastWindowStatesettings.json` and `failover.json`.
   - Restarts Wildix Collaboration and the Wildix Integration Service after applying the configuration.
   - Provides console output for progress tracking.
+ 
+## PPPC (Privacy Preferences Policy Control) Configuration
+
+For Wildix Integration Service (Identifier: `com.wildix.wiservice`), you need to configure the required Accessibility permission using a mobileconfig / Configuration Profile. This is necessary to allow the service to function properly on macOS devices.
+
+- **Mobileconfig Deployment:**  
+  You can deploy the Accessibility permission for `com.wildix.wiservice` via Microsoft Intune or another MDM solution by creating and distributing a mobileconfig profile. This will grant the Wildix Integration Service access to macOS accessibility features.
+
+- **User-Granted Permissions:**  
+  Please note that certain permissions, such as Microphone access, Camera access (for Kite), and Screen Recording permissions, **cannot be pre-configured** through MDM. Apple requires that these permissions be granted by the user on an ad-hoc basis during the use of Wildix Collaboration. Users will be prompted to allow these permissions when necessary.
 
 ## Prerequisites
 
