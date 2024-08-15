@@ -15,7 +15,16 @@ This script is provided "as-is" without any warranties or guarantees of any kind
 
 - **Key Features:**
   - Checks for the existence of the necessary configuration folder and creates it if missing.
-  - Configures the `settings.json` file with the required server address and other settings.
+  - Configures the `settings.json` file with the following settings:
+    ```json
+    {
+      "host": "yourwildixinstance.wildixin.com",
+      "callControlMode": false,
+      "callBringToFrontMode": true,
+      "allowInsecureConnections": false,
+      "keepRunningOnClose": true,
+      "launchAtStartup": true
+    }
   - Cleans up unnecessary files, including `lastWindowStatesettings.json` and `failover.json`.
   - Restarts Wildix Collaboration and the Wildix Integration Service after applying the configuration.
   - Provides console output for progress tracking.
