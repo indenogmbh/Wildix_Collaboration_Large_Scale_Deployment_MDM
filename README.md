@@ -35,3 +35,34 @@ This script is provided "as-is" without any warranties or guarantees of any kind
    ```bash
    git clone https://github.com/indenogmbh/Wildix_Collaboration_Large_Scale_Deployment_MDM.git
    cd Wildix_Collaboration_Large_Scale_Deployment_MDM
+   ```
+
+2. **Edit the Script (Optional):**
+
+   If you need to customize the script for a different server address or other presets, open the `wildix_collab_deploy.sh` file in a text editor and modify the relevant sections.
+
+3. **Deploy the Script:**
+
+   Use your MDM solution (e.g., Microsoft Intune or Jamf) to deploy the `wildix_collab_deploy.sh` script to your macOS devices.
+
+   - The script will configure the Wildix Collaboration app, set up the necessary files, and restart the app if installed.
+
+4. **Verify Deployment:**
+
+   After the script has been deployed, check the target devices to ensure that Wildix Collaboration has been configured correctly and is working as expected.
+
+## Error Handling
+
+- **Folder and File Checks:**  
+  The script checks for the existence of necessary folders and files before making any changes. If files are missing, it creates them with the required configuration.
+
+- **Application Restart:**  
+  If changes are made to the configuration, the script will terminate and restart the Wildix Collaboration app to apply the new settings. If the app is not installed, the script will skip this step.
+
+## Contributing
+
+If you would like to contribute to this project, feel free to fork the repository and submit a pull request with your improvements.
+
+## Copyright
+
+© 2024 Indeno GmbH. All rights reserved.
